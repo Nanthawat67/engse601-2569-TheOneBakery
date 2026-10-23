@@ -1,9 +1,15 @@
-# บันทึกการใช้ AI
+# AI-LOG — TheOneBakery
 
-ใช้ AI ได้เพื่อช่วยคิด ตรวจภาษา หรืออธิบายเครื่องมือ แต่ **ห้ามให้ AI สร้างผลการรัน หลักฐาน หรือข้อบกพร่อง** และทุกข้อเสนอของ AI ต้องตรวจกับงานจริงของทีมก่อนใช้
+AI usage is recorded for transparency. Draft content still requires team review; this log does not assert the team has approved the output. No AI-generated test results or screenshots were used.
 
-ถ้าไม่ได้ใช้เลย ให้เขียนแถวเดียวว่า “ทีมไม่ได้ใช้ AI ในงานส่วน B”
+| Date | User | Tool | Purpose | Accepted/changed/rejected | Verification | Affected part |
+|---|---|---|---|---|---|---|
+| 2026-10-23 | นันทวัฒน์ แซ่ย่าง (@Nanthawat67) | ChatGPT | Explain G1-G9 and map current project source files to the assignment template | Drafting assistance accepted for organizing work; all proposed requirements/findings are pending team review | Must check routes/orders.js, schema.sql, middleware/auth.js, README-FIX12.md and official worksheet prompts. Team review is not yet confirmed. | W01-W05, S1-B, S2-B, B1 documentation |
+| 2026-10-23 | นันทวัฒน์ แซ่ย่าง (@Nanthawat67) | ChatGPT | Structure test cases and record real status for available basic tests | Test code is copied in logic from the public repository's tests/basic.test.js; runtime results are limited to standalone Node assertions | The 3 basic assertions ran in this workspace; they do not call app APIs/DB. API/System/UAT remain Not Executed. | G7/G8 |
 
-| วันที่ | ผู้ใช้ | เครื่องมือ | ใช้ทำอะไร | ตรวจหรือแก้อะไรก่อนใช้ | ส่วนที่ได้รับผล |
-|---|---|---|---|---|---|
-| [กรอก] | [กรอก] | [เช่น ChatGPT, Claude, Copilot] | [เช่น ขอตัวอย่างโครง Jest] | [เช่น แก้ชื่อฟังก์ชันให้ตรงโค้ดจริง แล้วรันเอง] | [เช่น B1 ขั้นที่ 2] |
+## Limitations
+
+- AI output has not been confirmed by all team members or the project owner.
+- Proposed requirement text is not a stakeholder decision.
+- No API, database, System, or UAT test result was invented.
+- Any content based on missing SRS/Case X sources must be revised when the official documents are available.

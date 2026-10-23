@@ -1,72 +1,52 @@
-# ผลการรันจริง (B1)
+# ผลการรันจริง (B1) — TheOneBakery
+
+> สถานะนี้แยกผลจริงออกจากสิ่งที่ยังไม่ได้รัน ห้ามอ้างว่าระบบ THE ONE Bakery ผ่าน API/DB/System test จาก basic.test.js
 
 | รายการ | ข้อมูล |
 |---|---|
-| ทีม · feature | [กรอก] |
-| รุ่นของระบบที่รัน | [tag หรือ commit ของ repo โครงงาน] |
-| ชุดอ้างอิงที่ใช้ | [รุ่น · ลิงก์ไฟล์ใน 02-test-design] · ถ้าแก้ บอกว่าแก้อะไร |
-| เครื่องมือ | [เช่น Jest 29, Supertest, Chrome] |
-| วันที่รัน · ผู้รัน | [กรอก] |
+| Team / feature | TheOneBakery / การบันทึกคำสั่งซื้อและคำนวณยอดรวม |
+| Source | https://github.com/Nanthawat67/the-one-bakery-New (branch main; exact commit ยังไม่ได้ pin) |
+| Command ที่รันจริง | `node --test 03-test-execution/tests/basic.test.js` ใน workspace เตรียมงานนี้ |
+| ผลจริง | 3 passed, 0 failed — ดู `evidence/TC-BASE_unit_2026-10-23.txt` |
+| ขอบเขตของ test | ตรวจ state-flow array, batch-rounding formula, association metric arithmetic เท่านั้น ไม่เรียก backend API และไม่ต่อ PostgreSQL |
 
-## ขั้นที่ 1 เลือกระดับ (3 คะแนน)
+## ขั้นที่ 1 — เลือกระดับ
 
-เหตุผลต้องบอกว่าพฤติกรรมที่ตรวจอยู่ที่ไหน เช่น ในฟังก์ชันเดียว ระหว่างบริการกับฐานข้อมูล หรือทั้งระบบผ่านหน้าจอ
+| TC | ระดับ | เหตุผล | สถานะ |
+|---|---|---|---|
+| TC-01 | Integration/API | POST /api/orders เชื่อม Express route กับ PostgreSQL | Not Executed |
+| TC-02 | Integration/API | ตรวจ invalid/missing/inactive product ที่ API/DB boundary | Not Executed |
+| TC-03 | Integration/API | ตรวจ quantity 1, 0, -1, 1.5 และผล validation | Not Executed |
+| TC-04 | Integration | ตรวจ resource shortage และไม่มี partial insert/stock change | Not Executed |
+| TC-05 | Integration/System | ตรวจ role, ลำดับสถานะ และ status history | Not Executed |
+| TC-06 | Integration | ตรวจ recipe deduction, rollback และการตัดซ้ำ | Not Executed |
 
-| TC | ระดับ | เหตุผล (พฤติกรรมอยู่ที่ไหน) |
-|---|---|---|
-| TC-01 | [Unit / Integration / System / UAT] | [กรอก] |
-| TC-02 | [ ] | [กรอก] |
-| TC-03 | [ ] | [กรอก] |
-| TC-04 | [ ] | [กรอก] |
-| TC-05 | [ ] | [กรอก] |
-| TC-06 | [ ] | [กรอก] |
+## ขั้นที่ 2 — Automated test
 
-## ขั้นที่ 2 กรณีทดสอบอัตโนมัติ (6 คะแนน)
+- Code: `tests/basic.test.js`
+- Command: `node --test 03-test-execution/tests/basic.test.js`
+- Evidence: `evidence/TC-BASE_unit_2026-10-23.txt`
+- Actual status: Pass, 3/3 assertions in the isolated Node runner. This is not proof of application API behavior.
 
-| รายการ | ข้อมูล |
+## ขั้นที่ 3 — System ทำมือ
+
+- Scenario: เลือกสินค้า, ตั้งจำนวน, ตรวจยอด checkout, ส่งออเดอร์, รับเลขออเดอร์และเปิดหน้า track
+- Actual status: `Not Executed` — ไม่มี app instance/isolated test DB ที่เชื่อมต่อได้ใน workspace นี้
+- Next action: สมาชิกเปิด app กับ test DB ของทีมและ capture ภาพจริงที่เห็น input, result, timestamp; ไม่ใช้ข้อมูลลูกค้าจริง
+
+## ขั้นที่ 4 — UAT
+
+- Scenario: ตัวแทนร้านทำ order จริงใน test environment ตั้งแต่ review → production → packing → pickup
+- Actual status: `Not Executed` — ยังไม่มี session ที่ผู้ใช้ตัวแทนดำเนินการและบันทึกไว้
+- Plan: นัดผู้ใช้ตัวแทน, ใช้ข้อมูล synthetic, บันทึกขั้นตอน/ผลจริง/วันที่และภาพหน้าจอ
+
+## ขั้นที่ 5 — Summary
+
+| Group | Result |
 |---|---|
-| TC และระดับ | [เช่น TC-02 · Unit] |
-| ไฟล์โค้ดทดสอบ | [ลิงก์ไปที่ tests/... หรือไฟล์ใน repo โครงงานพร้อม commit] |
-| คำสั่งที่ใช้รัน | `[เช่น npx jest tests/booking.test.js]` |
-| หลักฐาน | [ลิงก์ไปที่ evidence/...] |
-| สถานะ | [Pass / Fail / Blocked / Not Executed] เพราะ [กรอก] |
+| TC-BASE standalone assertions | Pass 3 / Fail 0 |
+| TC-01..TC-06 app API/DB tests | Not Executed |
+| Manual System | Not Executed |
+| UAT | Not Executed |
 
-ผลเทอร์มินัล (คัดลอกจากการรันจริงทั้งก้อน)
-
-```text
-[วางผลเทอร์มินัลที่นี่]
-```
-
-## ขั้นที่ 3 System ทำมือ (4 คะแนน)
-
-| รายการ | ข้อมูล |
-|---|---|
-| TC | [กรอก] |
-| ขั้นตอน | 1. [กรอก] <br> 2. [กรอก] <br> 3. [กรอก] <br> 4. [กรอก] |
-| ผลที่คาดหวัง | [จากชุดอ้างอิง] |
-| ผลจริง | [กรอก] · ภาพ: [ลิงก์ไปที่ evidence/...] |
-| สถานะ | [กรอก] |
-
-## ขั้นที่ 4 UAT (3 คะแนน)
-
-ผู้ทดสอบ UAT คือผู้ใช้จริงหรือตัวแทนผู้ใช้ ไม่ใช่สมาชิกทีม ถ้ายังไม่ได้ทดสอบ ใช้ Not Executed พร้อมแผน
-
-| รายการ | ข้อมูล |
-|---|---|
-| ชื่อสถานการณ์ · ผู้ทดสอบ | [กรอก] |
-| ขั้นตอน (ลำดับงานของผู้ใช้) | 1. [กรอก] <br> 2. [กรอก] <br> 3. [กรอก] <br> 4. [กรอก] |
-| ถือว่าผ่านเมื่อ | [วัดจากการทำงานสำเร็จของผู้ใช้] |
-| สถานะ และแผน | [เช่น Not Executed · จะทดสอบกับ ... วันที่ ...] |
-
-## ขั้นที่ 5 ตารางผลของทุกกรณีทดสอบ (3 คะแนน)
-
-| TC | ระดับ | ผลที่คาดหวัง | ผลจริง | สถานะ | หลักฐาน |
-|---|---|---|---|---|---|
-| TC-01 | [ ] | [ ] | [ ] | [ ] | [ลิงก์] |
-| TC-02 | [ ] | [ ] | [ ] | [ ] | [ลิงก์] |
-| TC-03 | [ ] | [ ] | [ ] | [ ] | [ลิงก์] |
-| TC-04 | [ ] | [ ] | [ ] | [ ] | [ลิงก์] |
-| TC-05 | [ ] | [ ] | [ ] | [ ] | [ลิงก์] |
-| TC-06 | [ ] | [ ] | [ ] | [ ] | [ลิงก์] |
-
-สรุป: Pass [ ] · Fail [ ] · Blocked [ ] · Not Executed [ ]
+Fail = 0 ในชุด baseline ไม่ได้หมายความว่า app ผ่าน test; ยังต้องทดสอบ API/DB/System/UAT และเก็บหลักฐานจริง
