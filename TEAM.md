@@ -25,12 +25,12 @@
 
 | Work item | Preparation source | Peer reviewer (not author) | สถานะตรวจจริง |
 |---|---|---|---|
-| W01 | S1-B + static inspection of public source code; AI helped organize risk cards | `[เติมหลังเพื่อนตรวจจริง]` | Draft; no approved project SRS/Proposal in checked sources |
-| W02 | S1-B + public source-code paths; AI helped organize route map | `[เติมหลังเพื่อนตรวจจริง]` | Draft; no application API/system evidence |
+| W01 | S1-B + static inspection of public source code; AI helped organize risk cards | `ธนกร ผดุงศิลป์` | Draft; no approved project SRS/Proposal in checked sources |
+| W02 | S1-B + public source-code paths; AI helped organize route map | `ธนกร ผดุงศิลป์` | Draft; no application API/system evidence |
 | W03 | S1-B + static code inspection; AI helped structure proposed requirements/ACs | `ธนกร ผดุงศิลป์` | Proposed only; owner confirmation pending |
-| W04 | S1-B + source review + proposed W03 requirements; AI helped organize review/RTM | `[ณัฐพงศ์ จันทร์สิงห์]` | Gate A `Not Ready`; no formal SRS/sign-off |
-| W05 | Current official course Case X sources: SRS v1.1 and HLD v0.9 Visual Guide; AI helped structure trace/findings/questions | `[เติมหลัง peer review เทียบ DOCX จริง]` | Draft; exact wording/sections need verification against full DOCX |
-| S1-B | Supplied official S1 worksheet Section B + static source review | `[เติมหลังเพื่อนตรวจจริง]` | Retrospective component flow; static observation only |
+| W04 | S1-B + source review + proposed W03 requirements; AI helped organize review/RTM | `ณัฐพงศ์ จันทร์สิงห์` | Gate A `Not Ready`; no formal SRS/sign-off |
+| W05 | Current official course Case X sources: SRS v1.1 and HLD v0.9 Visual Guide; AI helped structure trace/findings/questions | `ณัฐพงศ์ จันทร์สิงห์` | Draft; exact wording/sections need verification against full DOCX |
+| S1-B | Supplied official S1 worksheet Section B + static source review | `ณัฐพงศ์ จันทร์สิงห์` | Retrospective component flow; static observation only |
 | S2-B | Official ENGSE601 S2 course instructions + S1-B feature and code-level proposed test basis | `[เติมหลังเพื่อนตรวจจริง]` | Draft; all test cases Not Executed |
 | B1/G8 | Existing three standalone Node assertions and real terminal output in evidence folder | `[เติมหลังเพื่อนตรวจจริง]` | 3 baseline assertions passed; not application/API/DB tests. System/UAT Not Executed |
 | B3/G9 / AI log | AI usage and source limitations recorded in AI-LOG.md | `[ให้สมาชิกยืนยันตามจริง]` | Confirmation pending |
