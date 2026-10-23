@@ -17,7 +17,7 @@
 | นันทวัฒน์ แซ่ย่าง | Test Scope, Strategy, Risk, Entry/Exit | `Nanthawat67` |
 | ธนกร ผดุงศิลป์ | Feature และ Business Rule | `thanakon17` |
 | อภิรยา สายนาคา | Component และ Data Flow | `[ทีมยืนยันการสะกดชื่อและ username]` |
-| ณัฐพงศ์ จันทร์สิงห์ | ตรวจสอบกฎและข้อค้นพบ | `[0rea]` |
+| ณัฐพงศ์ จันทร์สิงห์ | ตรวจสอบกฎและข้อค้นพบ | `0rea` |
 
 > ตรวจชื่อภาษาไทยกับใบงานฉบับจริงอีกครั้งก่อน Release; ตารางนี้ยึดข้อความจาก S1-B ที่ได้รับ ไม่ได้ยืนยันว่าทุกคนได้ยอมรับหน้าที่แล้ว.
 
@@ -39,10 +39,10 @@
 
 | Member | Actual contribution completed | Evidence / file | Confirmed by member? |
 |---|---|---|---|
-| นันทวัฒน์ แซ่ย่าง | `[ทีมกรอกงานที่ทำจริง]` | `[path/commit]` | `[Yes/No]` |
-| ธนกร ผดุงศิลป์ | `[ทีมกรอกงานที่ทำจริง]` | `[path/commit]` | `[Yes/No]` |
-| อภิรยา สายนาคา | `[ทีมกรอกงานที่ทำจริง]` | `[path/commit]` | `[Yes/No]` |
-| ณัฐพงศ์ จันทร์สิงห์ | `[ทีมกรอกงานที่ทำจริง]` | `[path/commit]` | `[Yes/No]` |
+| นันทวัฒน์ แซ่ย่าง | `ประสานงานและจัดเตรียมไฟล์งานกลุ่ม G1–G9 ตรวจสอบโครงสร้างและตำแหน่งไฟล์ให้ตรงตามรายการส่งงาน ใช้ ChatGPT ช่วยร่างและจัดระเบียบเอกสาร พร้อมบันทึกการใช้ AI และรวบรวมรายการที่ต้องตรวจสอบเพิ่มเติม` | `SUBMISSIONS.md`; `TEAM.md`; `AI-LOG.md`; `01-plan/S1-B_TheOneBakery.pdf`; `02-test-design/S2-B_TheOneBakery.pdf`; `WEEKS/week-01/submission/`; `WEEKS/week-02/submission/`; `WEEKS/week-03/submission/`; `WEEKS/week-04/submission/`; `WEEKS/week-05/submission/` | `Yes` |
+| ธนกร ผดุงศิลป์ | `ตรวจทานเอกสาร W01–W03 และใบงาน S1-B/S2-B เทียบกับโจทย์อาจารย์ ตรวจความครบถ้วนของข้อกำหนด กรณีทดสอบ และผลที่คาดหวัง พร้อมแจ้งจุดที่ควรแก้ไข` | `WEEKS/week-01/submission/; WEEKS/week-02/submission/; WEEKS/week-03/submission/; 01-plan/S1-B_TheOneBakery.pdf; 02-test-design/S2-B_TheOneBakery.pdf` | `No` |
+| อภิรยา สายนาคา | `ตรวจทานเอกสาร W04/W05 กับคำแนะนำและเอกสารต้นฉบับของรายวิชา ตรวจความถูกต้องของการอ้างอิงและความเชื่อมโยงระหว่างข้อกำหนดกับเอกสารออกแบบ พร้อมระบุจุดที่ต้องตรวจสอบเพิ่มเติม` | `WEEKS/week-04/submission/; WEEKS/week-05/submission/; WEEKS/week-05/W05_SOURCE_NOTES.md` | `No` |
+| ณัฐพงศ์ จันทร์สิงห์ | `ตรวจทานรายงานการทดสอบ โค้ดทดสอบ และหลักฐานที่จัดเก็บ เทียบผลที่รายงานกับหลักฐานจริง รวมถึงตรวจรายการส่งงานและการบันทึกการใช้ AI` | `03-test-execution/execution-report.md; 03-test-execution/tests/; 03-test-execution/evidence/; SUBMISSIONS.md; AI-LOG.md` | `No` |
 
 ## Before Release
 
