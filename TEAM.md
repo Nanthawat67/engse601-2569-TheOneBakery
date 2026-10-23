@@ -27,7 +27,7 @@
 |---|---|---|---|
 | W01 | S1-B + static inspection of public source code; AI helped organize risk cards | `[เติมหลังเพื่อนตรวจจริง]` | Draft; no approved project SRS/Proposal in checked sources |
 | W02 | S1-B + public source-code paths; AI helped organize route map | `[เติมหลังเพื่อนตรวจจริง]` | Draft; no application API/system evidence |
-| W03 | S1-B + static code inspection; AI helped structure proposed requirements/ACs | `[เติมหลังเพื่อนตรวจจริง]` | Proposed only; owner confirmation pending |
+| W03 | S1-B + static code inspection; AI helped structure proposed requirements/ACs | `ธนกร ผดุงศิลป์` | Proposed only; owner confirmation pending |
 | W04 | S1-B + source review + proposed W03 requirements; AI helped organize review/RTM | `[เติมหลังเพื่อนตรวจจริง]` | Gate A `Not Ready`; no formal SRS/sign-off |
 | W05 | Current official course Case X sources: SRS v1.1 and HLD v0.9 Visual Guide; AI helped structure trace/findings/questions | `[เติมหลัง peer review เทียบ DOCX จริง]` | Draft; exact wording/sections need verification against full DOCX |
 | S1-B | Supplied official S1 worksheet Section B + static source review | `[เติมหลังเพื่อนตรวจจริง]` | Retrospective component flow; static observation only |
