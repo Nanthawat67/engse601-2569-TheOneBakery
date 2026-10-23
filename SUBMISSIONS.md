@@ -8,7 +8,7 @@
 |---|---|
 | TeamName | `TheOneBakery` |
 | Project | THE ONE Bakery |
-| ผู้ส่งหลัก | นันทวัฒน์ แซ่ย่าง (`@Nanthawat67`) |
+| ผู้ส่งหลัก | นันทวัฒน์ แซ่ย่าง (`Nanthawat67`) |
 | Repository | https://github.com/Nanthawat67/engse601-2569-TheOneBakery |
 | Critical feature from supplied S1-B | การบันทึกคำสั่งซื้อและคำนวณยอดรวม |
 
