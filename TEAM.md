@@ -6,7 +6,7 @@
 |---|---|
 | TeamName | `TheOneBakery` |
 | Project | THE ONE Bakery |
-| ผู้ส่งหลัก | นันทวัฒน์ แซ่ย่าง (`@Nanthawat67`) |
+| ผู้ส่งหลัก | นันทวัฒน์ แซ่ย่าง (`Nanthawat67`) |
 | Repository | https://github.com/Nanthawat67/engse601-2569-TheOneBakery |
 | Source project | https://github.com/Nanthawat67/the-one-bakery-New |
 
@@ -14,8 +14,8 @@
 
 | สมาชิก | หน้าที่ที่ระบุในใบงาน | GitHub username — ทีมกรอก/ยืนยัน |
 |---|---|---|
-| นันทวัฒน์ แซ่ย่าง | Test Scope, Strategy, Risk, Entry/Exit | `@Nanthawat67` |
-| ธนกร ผดุงศิลป์ | Feature และ Business Rule | `[ทีมกรอก username จริง]` |
+| นันทวัฒน์ แซ่ย่าง | Test Scope, Strategy, Risk, Entry/Exit | `Nanthawat67` |
+| ธนกร ผดุงศิลป์ | Feature และ Business Rule | `thanakon17` |
 | อภิรยา สายนาคา | Component และ Data Flow | `[ทีมยืนยันการสะกดชื่อและ username]` |
 | ณัฐพงศ์ จันทร์สิงห์ | ตรวจสอบกฎและข้อค้นพบ | `[ทีมกรอก username จริง]` |
 
